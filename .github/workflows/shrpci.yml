@@ -8,13 +8,12 @@ on:
 env:
   MANIFEST: ""
   # Recovery Manifest URL with -b branch
-  DT_LINK: ""
+  DT_LINK: "repo init -u git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0"
   # Your Device Tree Link
-  VENDOR: ""
   # Your Device's Vendor name as in used inside DT. Example: xiaomi, samsung, asus, etc.
-  CODENAME: ""
+  CODENAME: "xiaomi"
   # Your Device's Codename as in used inside DT." Example: nikel, phoenix, ginkgo, etc.
-  KERNEL_LINK: ""
+  KERNEL_LINK: "cactus"
   # Kernel repo link with optional -b branch. Only for building kernel from source. Ignore if using prebuilt.
   TARGET: ""
   # Set as recoveryimage (or bootimage if no recovery partition avaiable)
