@@ -90,6 +90,17 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
 TW_SCREEN_BLANK_ON_BOOT := true
 
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/hw/android.hardware.keymaster@3.0-impl.so \
+    $(TARGET_OUT_VENDOR_EXECUTABLES)/hw/android.hardware.keymaster@3.0-service \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libkeymaster3device.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
+
+# Vendor
+PLATFORM_SECURITY_PATCH := 2099-12-31
+TARGET_COPY_OUT_VENDOR := vendor
+PLATFORM_VERSION := 99.99.99
+
 #SHRP
 SHRP_DEVICE_CODE := cactus
 SHRP_PATH := device/xiaomi/cactus
